@@ -1,12 +1,14 @@
-/* Simple responsive styles */
+/* বেসিক সেটআপ */
 :root{
   --accent: #0077cc;
-  --bg: #f0f2f5;
+  --bg: #f7f8fa;
   --card: #ffffff;
-  --text: #333;
+  --text: #222;
   --muted: #666;
-  --radius: 12px;
-  --font-main: 'Hind Siliguri', system-ui, sans-serif; /* Added Bangla Font */
+  --radius: 10px;
+  /* বাংলা ফন্ট */
+  --font-main: 'Hind Siliguri', system-ui, -apple-system, sans-serif;
+  --red-accent: #d32f2f;
 }
 
 *{box-sizing:border-box}
@@ -19,47 +21,43 @@ body{
   font-family: var(--font-main);
 }
 
-.container{max-width:800px;margin:0 auto;padding:20px}
+.container{max-width:900px;margin:0 auto;padding:20px}
 
-/* Hero Section */
+/* হিরো সেকশন */
 .hero{
-  background: linear-gradient(135deg, var(--accent), #004a80);
+  background: linear-gradient(180deg, var(--accent), #005fa3);
   color:#fff;
   padding:50px 0;
   text-align:center;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
-
 .hero .photo{
-  width:150px;
-  height:150px;
+  width:160px;
+  height:160px;
   border-radius:50%;
   object-fit:cover;
-  border:5px solid rgba(255,255,255,0.3);
+  border:6px solid rgba(255,255,255,0.2);
   display:block;
   margin:0 auto 15px;
   background-color: #ddd;
 }
-
 .hero h1{margin:10px 0 5px;font-size:32px; font-weight: 700;}
-.hero .subtitle{margin:0 0 15px;opacity:0.9; font-size: 18px;}
+.hero .subtitle{margin:0 0 10px;opacity:0.95; font-size: 18px;}
 
-/* Ballot Badge */
+/* ব্যালট বক্স ডিজাইন */
 .ballot-badge {
     background: #ffeb3b;
     color: #000;
     display: inline-block;
-    padding: 8px 20px;
+    padding: 8px 25px;
     border-radius: 50px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin: 15px 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .current-role {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.15);
     display: inline-block;
     padding: 10px 20px;
     border-radius: 8px;
@@ -69,24 +67,38 @@ body{
 
 .cta{
   display:inline-block;padding:12px 25px;border-radius:999px;background:#fff;color:var(--accent);text-decoration:none;font-weight:700;
-  box-shadow:0 6px 18px rgba(0,0,0,0.15);
+  box-shadow:0 6px 18px rgba(0,0,0,0.1);
   transition: transform 0.2s;
 }
 .cta:hover { transform: scale(1.05); }
 
-/* Cards */
+/* কার্ড ডিজাইন */
 .card{
   background:var(--card);
   border-radius:var(--radius);
   padding:25px;
   margin:20px 0;
-  box-shadow:0 4px 15px rgba(0,0,0,0.05);
+  box-shadow:0 6px 18px rgba(8,12,20,0.04);
   border-top: 4px solid var(--accent);
 }
-.card h2{margin-top:0; color: var(--accent); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px;}
-.card h2 small { font-size: 0.6em; color: #777; font-weight: normal; }
+.card h2{
+    margin-top:0; 
+    color: var(--accent); 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+}
+.card h2 small { font-size: 0.6em; color: #777; font-weight: normal; display: block; margin-top: 5px; }
 
-/* Quote Box */
+/* ইশতেহার লিস্ট */
+ul.manifesto-list { list-style: none; padding: 0; }
+ul.manifesto-list li {
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee;
+}
+ul.manifesto-list li:last-child { border-bottom: none; }
+ul.manifesto-list strong { color: #000; font-weight: 600; }
+
 .quote-box {
     background: #eef7ff;
     padding: 15px;
@@ -97,31 +109,24 @@ body{
     color: #444;
 }
 
-/* Manifesto List */
-.manifesto-list { list-style: none; padding: 0; }
-.manifesto-list li {
-    padding: 10px 0;
-    border-bottom: 1px dashed #eee;
-}
-.manifesto-list li:last-child { border-bottom: none; }
-.manifesto-list strong { color: #000; }
-
-/* July Story Theme */
+/* জুলাই বিপ্লব স্পেশাল থিম */
 .july-theme {
-    background-color: #fffafa; /* Very light red */
-    border-top: 4px solid #d32f2f;
+    background-color: #fffafa; /* খুব হালকা লাল */
+    border-top: 4px solid var(--red-accent);
+}
+.july-theme p { text-align: justify; margin-bottom: 15px; }
+.final-quote {
+    font-weight: bold;
+    color: var(--red-accent);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1em;
 }
 
-/* Image Placeholders within Text */
-.image-placeholder {
+/* ভিডিও সেকশন */
+.video-container {
     margin: 20px 0;
     text-align: center;
-}
-.image-placeholder img {
-    max-width: 100%;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .caption {
     font-size: 13px;
@@ -129,40 +134,52 @@ body{
     margin-top: 5px;
     font-style: italic;
 }
-
-/* Video Grid */
 .video-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
+    margin-top: 20px;
 }
 .video-item iframe {
     width: 100%;
     height: 250px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
-/* Footer */
-.footer{padding:30px 0;text-align:center;color:var(--muted);font-size:14px; border-top: 1px solid #ddd;}
+/* ইনকিলাব রোল বক্স */
+.current-role-box {
+    background: #fdfdfe;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+.current-role-box h3 { margin-top: 0; color: #333; }
 
-/* Contact Buttons */
-.contact-links { margin-top: 15px; }
+/* বাটন ও ফুটার */
+.contact-links { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;}
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    margin-right: 10px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
     font-weight: bold;
+    text-align: center;
 }
 .fb { background: #1877f2; }
 .wa { background: #25d366; }
 
-/* Responsive layout tweaks */
+.fb-link-box { text-align: center; margin-top: 20px; }
+.fb-btn { background: #3b5998; width: 100%; }
+
+.footer{padding:30px 0;text-align:center;color:var(--muted);font-size:14px; border-top: 1px solid #ddd;}
+
+/* মোবাইল রেসপন্সিভ */
 @media(min-width:800px){
   .hero{padding:70px 0}
   .hero h1{font-size:42px}
   .container{padding:30px}
-  .video-grid { grid-template-columns: 1fr 1fr; } /* 2 columns for video on PC */
+  .video-grid { grid-template-columns: 1fr 1fr; } /* পিসিতে পাশাপাশি ২টা ভিডিও */
+  .fb-btn { width: auto; }
 }
