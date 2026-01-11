@@ -183,3 +183,22 @@ ul.manifesto-list strong { color: #000; font-weight: 600; }
   .video-grid { grid-template-columns: 1fr 1fr; } /* পিসিতে পাশাপাশি ২টা ভিডিও */
   .fb-btn { width: auto; }
 }
+/* YouTube Shorts Player Style */
+.youtube-short-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 177.77%; /* 9:16 অনুপাত (Shorts এর জন্য) */
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3); /* শ্যাডো */
+    border-radius: 12px; /* রাউন্ড কর্নার */
+    background: #000;
+}
+
+.youtube-short-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
