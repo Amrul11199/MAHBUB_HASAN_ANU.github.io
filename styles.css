@@ -202,3 +202,11 @@ ul.manifesto-list strong { color: #000; font-weight: 600; }
     height: 100%;
     border-radius: 12px;
 }
+
+/* গুগল ফর্ম রেসপন্সিভ ডিজাইন */
+.form-container iframe {
+    width: 100% !important; /* মোবাইলে পুরো স্ক্রিন জুড়ে দেখাবে */
+    border: none;
+    border-radius: 10px;
+    background-color: #f7f8fa;
+}
